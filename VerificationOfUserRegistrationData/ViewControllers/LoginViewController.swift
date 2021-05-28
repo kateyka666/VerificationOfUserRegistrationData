@@ -15,9 +15,12 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var forgetNameBtn: UIButton!
     @IBOutlet weak var forgetPasswordBtn: UIButton!
     
+   private var user = User.createUsers()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addPropertyForTextField()
+       
     }
     
     override func viewWillLayoutSubviews() {
@@ -40,7 +43,7 @@ class LoginViewController: UIViewController {
                 return
             }
             guard let destination = segue.destination as? WelcomeViewController else { return}
-            destination.userName = userNameTextField.text
+            
         }
     }
     
@@ -52,7 +55,7 @@ class LoginViewController: UIViewController {
         userPasswordTextField.text = ""
         
         guard let source = unwindSegue.source as? WelcomeViewController else {return}
-        doAlertToBtn(title: "До свидания, \(source.userName!) 🌹🌹🌹")
+        doAlertToBtn(title: "До свидания, \(user[0].name) 🌹🌹🌹")
     }
     
     @IBAction func logInBtnPressed() {
@@ -62,9 +65,9 @@ class LoginViewController: UIViewController {
     @IBAction func forgetBtnPressed(_ sender: UIButton) {
         switch sender {
         case forgetNameBtn :
-            doAlertToBtn(title: "Вас зовут: Анастасия")
+            doAlertToBtn(title: "Вас зовут: \(user[0].name)")
         case forgetPasswordBtn:
-            doAlertToBtn(title: "Ваш пароль: кролики")
+            doAlertToBtn(title: "Ваш пароль: \(user[0].password)")
         default:
             break
         }
@@ -101,16 +104,16 @@ class LoginViewController: UIViewController {
             userPasswordTextField.text!.isEmpty {
             doAlertToBtn(title: "Сначала введите Имя пользователя и Пароль",textField: userNameTextField)
             return false
-        } else if userNameTextField.text != "Анастасия" {
-            doAlertToBtn(title: "Вас зовут: Анастасия")
-            userNameTextField.text = "Анастасия"
+        } else if userNameTextField.text != user[0].name {
+            doAlertToBtn(title: "Вас зовут: \(user[0].name)")
+            userNameTextField.text = user[0].name
             return false
-        } else if userPasswordTextField.text != "кролики" {
-            doAlertToBtn(title: "Ваш пароль: кролики")
-            userPasswordTextField.text = "кролики"
+        } else if userPasswordTextField.text != user[0].password {
+            doAlertToBtn(title: "Ваш пароль: \(user[0].password)")
+            userPasswordTextField.text = user[0].password
             return false
-        } else if userNameTextField.text == "Анастасия" &&
-                    userPasswordTextField.text == "кролики" {
+        } else if userNameTextField.text == user[0].name &&
+                    userPasswordTextField.text == user[0].password {
             return true
         }
         return false
