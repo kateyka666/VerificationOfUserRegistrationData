@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -41,7 +42,7 @@
                                     <imageReference key="image" image="hare" catalog="system" symbolScale="large" renderingMode="original"/>
                                 </state>
                                 <connections>
-                                    <action selector="logInBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sle-8V-t9E"/>
+                                    <action selector="logInBtnPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="9qn-O9-dLa"/>
                                     <segue destination="r5K-KR-2el" kind="show" identifier="Autorization" id="0SI-Wq-9va"/>
                                 </connections>
                             </button>
@@ -132,7 +133,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tGl-Qp-joh"/>
-                        <color key="backgroundColor" red="0.42632806944701906" green="1" blue="0.47846896598539879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="vgZ-qX-jbW" firstAttribute="top" secondItem="Go3-8k-oZU" secondAttribute="bottom" constant="40" id="0ch-d0-dfK"/>
                             <constraint firstItem="Gl9-29-5rz" firstAttribute="centerX" secondItem="z6r-sd-Zml" secondAttribute="centerX" id="8A7-a4-i7t"/>

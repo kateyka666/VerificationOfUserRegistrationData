@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		792969652660EDAB00E756AD /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792969642660EDAB00E756AD /* UIView+Extensions.swift */; };
 		79D56179265C597B0048C061 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D56178265C597B0048C061 /* AppDelegate.swift */; };
 		79D5617B265C597B0048C061 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D5617A265C597B0048C061 /* SceneDelegate.swift */; };
 		79D5617D265C597B0048C061 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D5617C265C597B0048C061 /* LoginViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		792969642660EDAB00E756AD /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		79D56175265C597B0048C061 /* VerificationOfUserRegistrationData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VerificationOfUserRegistrationData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79D56178265C597B0048C061 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79D5617A265C597B0048C061 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +41,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7929695F2660EC7C00E756AD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				792969642660EDAB00E756AD /* UIView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		792969602660ECA100E756AD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		792969612660ECB800E756AD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				79D5618C265DA3560048C061 /* WelcomeViewController.swift */,
+				79D5617C265C597B0048C061 /* LoginViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		792969622660ECC900E756AD /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				79D56181265C597F0048C061 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		792969632660ECE200E756AD /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				79D5617E265C597B0048C061 /* Main.storyboard */,
+				79D56183265C597F0048C061 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		79D5616C265C597A0048C061 = {
 			isa = PBXGroup;
 			children = (
@@ -58,13 +101,13 @@
 		79D56177265C597B0048C061 /* VerificationOfUserRegistrationData */ = {
 			isa = PBXGroup;
 			children = (
+				792969632660ECE200E756AD /* Storyboards */,
+				792969622660ECC900E756AD /* Resource */,
+				792969612660ECB800E756AD /* ViewControllers */,
+				792969602660ECA100E756AD /* Models */,
+				7929695F2660EC7C00E756AD /* Extensions */,
 				79D56178265C597B0048C061 /* AppDelegate.swift */,
 				79D5617A265C597B0048C061 /* SceneDelegate.swift */,
-				79D5618C265DA3560048C061 /* WelcomeViewController.swift */,
-				79D5617C265C597B0048C061 /* LoginViewController.swift */,
-				79D5617E265C597B0048C061 /* Main.storyboard */,
-				79D56181265C597F0048C061 /* Assets.xcassets */,
-				79D56183265C597F0048C061 /* LaunchScreen.storyboard */,
 				79D56186265C597F0048C061 /* Info.plist */,
 			);
 			path = VerificationOfUserRegistrationData;
@@ -142,6 +185,7 @@
 			files = (
 				79D5617D265C597B0048C061 /* LoginViewController.swift in Sources */,
 				79D5618D265DA3570048C061 /* WelcomeViewController.swift in Sources */,
+				792969652660EDAB00E756AD /* UIView+Extensions.swift in Sources */,
 				79D56179265C597B0048C061 /* AppDelegate.swift in Sources */,
 				79D5617B265C597B0048C061 /* SceneDelegate.swift in Sources */,
 			);
@@ -220,7 +264,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -275,7 +319,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

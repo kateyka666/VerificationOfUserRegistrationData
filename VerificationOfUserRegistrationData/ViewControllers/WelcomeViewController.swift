@@ -10,21 +10,32 @@ import UIKit
 class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var welcomeUserNameLabel: UILabel!
+    
+    private let primaryColor = UIColor(
+        red: CGFloat.random(in: 0...255),
+        green: 109/255,
+        blue: 128/255,
+        alpha: 1
+    )
+    private let secondaryColor = UIColor(
+        red: 107/255 ,
+        green: CGFloat.random(in: 0...255),
+        blue: 230/255,
+        alpha: 1
+    )
 
     var userName : String?
-    
-    var loginVC = LoginViewController()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        welcomeUserNameLabel.numberOfLines = 0
-        
-        addUserName()
-        
+        setupViewAndLabel()
     }
-    private func addUserName() {
+    private func setupViewAndLabel() {
+        view.addverticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
+        
         welcomeUserNameLabel.text = " \(userName!), здравствуйте!"
+        welcomeUserNameLabel.numberOfLines = 0
     }
     
     @IBAction func logOutBtnPressed(_ sender: UIButton) {

@@ -17,14 +17,11 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        makePropertyForTextField()
-        
+        addPropertyForTextField()
     }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        
         userNameTextField.layer.cornerRadius = 15
         userPasswordTextField.layer.cornerRadius = 15
         forgetNameBtn.layer.cornerRadius = 10
@@ -35,7 +32,6 @@ class LoginViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         self.view.endEditing(true)
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -59,32 +55,34 @@ class LoginViewController: UIViewController {
         doAlertToBtn(title: "До свидания, \(source.userName!) 🌹🌹🌹")
     }
     
-    @IBAction func logInBtnPressed(_ sender: UIButton) {
+    @IBAction func logInBtnPressed() {
         checkTextFieldText()
     }
     
     @IBAction func forgetBtnPressed(_ sender: UIButton) {
-        if sender.tag == 1 {
+        switch sender {
+        case forgetNameBtn :
             doAlertToBtn(title: "Вас зовут: Анастасия")
-            
-        } else if sender.tag == 2{
+        case forgetPasswordBtn:
             doAlertToBtn(title: "Ваш пароль: кролики")
+        default:
+            break
         }
     }
     
-    private func doAlertToBtn (title: String) {
+    private func doAlertToBtn (title: String, textField : UITextField? = nil) {
         let alert = UIAlertController(title: title,
                                       message: nil,
                                       preferredStyle: .alert
         )
         let alertAction = UIAlertAction(title: "Понятненько",
-                                        style:.default,
-                                        handler: nil
-        )
+                                        style:.default) { _ in
+            textField?.text = ""
+        }
         alert.addAction(alertAction)
         present(alert, animated: true, completion: nil)
     }
-    private func makePropertyForTextField() {
+    private func addPropertyForTextField() {
         userNameTextField.delegate = self
         //        отключаем автокоррекцию для имени
         userNameTextField.autocorrectionType = .no
@@ -96,48 +94,37 @@ class LoginViewController: UIViewController {
         userPasswordTextField.delegate = self
         userPasswordTextField.clearButtonMode = .whileEditing
         userPasswordTextField.returnKeyType = .done
-        
     }
     
     private func checkTextFieldText () -> Bool {
-        
         if userNameTextField.text!.isEmpty &&
             userPasswordTextField.text!.isEmpty {
-            
-            doAlertToBtn(title: "Сначала введите Имя пользователя и Пароль")
-            userNameTextField.returnKeyType = .next
-            
+            doAlertToBtn(title: "Сначала введите Имя пользователя и Пароль",textField: userNameTextField)
             return false
-            
         } else if userNameTextField.text != "Анастасия" {
-            
             doAlertToBtn(title: "Вас зовут: Анастасия")
             userNameTextField.text = "Анастасия"
-            
             return false
-            
         } else if userPasswordTextField.text != "кролики" {
-            
             doAlertToBtn(title: "Ваш пароль: кролики")
-            //            если строчку ниже раскомментировать, то почему то при вводе неправильного имени подтсавляется и правильное имя, и пароль, не понятно почему...буду благодарна, если подскажете:)
-            //            userPasswordTextField.text = "кролики"
+            userPasswordTextField.text = "кролики"
             return false
-            
         } else if userNameTextField.text == "Анастасия" &&
                     userPasswordTextField.text == "кролики" {
-            
             return true
-            
         }
         return false
     }
 }
 
-
 extension LoginViewController : UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
-        userPasswordTextField.resignFirstResponder()
+        if textField == userNameTextField {
+            userPasswordTextField.becomeFirstResponder()
+        } else {
+            logInBtnPressed()
+            performSegue(withIdentifier: "Autorization", sender: nil)
+        }
         return true
     }
 }
