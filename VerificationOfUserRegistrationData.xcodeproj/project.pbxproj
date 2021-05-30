@@ -13,7 +13,9 @@
 		7929696C26618DCD00E756AD /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7929696B26618DCD00E756AD /* WebKit.framework */; };
 		7929696E26618EB400E756AD /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7929696D26618EB400E756AD /* UserInfoViewController.swift */; };
 		7929697026618EF000E756AD /* UserPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7929696F26618EF000E756AD /* UserPhotoViewController.swift */; };
-		79D56179265C597B0048C061 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D56178265C597B0048C061 /* AppDelegate.swift */; };
+		79A2A31B2663A2AE00AD2FFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D56178265C597B0048C061 /* AppDelegate.swift */; };
+		79A2A31D2663A50100AD2FFE /* SongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A2A31C2663A50100AD2FFE /* SongViewController.swift */; };
+		79A2A3202663A96F00AD2FFE /* песня про зайцев.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 79A2A31F2663A96F00AD2FFE /* песня про зайцев.mp3 */; };
 		79D5617B265C597B0048C061 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D5617A265C597B0048C061 /* SceneDelegate.swift */; };
 		79D5617D265C597B0048C061 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D5617C265C597B0048C061 /* LoginViewController.swift */; };
 		79D56180265C597B0048C061 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79D5617E265C597B0048C061 /* Main.storyboard */; };
@@ -29,6 +31,8 @@
 		7929696B26618DCD00E756AD /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		7929696D26618EB400E756AD /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		7929696F26618EF000E756AD /* UserPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPhotoViewController.swift; sourceTree = "<group>"; };
+		79A2A31C2663A50100AD2FFE /* SongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewController.swift; sourceTree = "<group>"; };
+		79A2A31F2663A96F00AD2FFE /* песня про зайцев.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "песня про зайцев.mp3"; path = "../../../../../песня про зайцев.mp3"; sourceTree = "<group>"; };
 		79D56175265C597B0048C061 /* VerificationOfUserRegistrationData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VerificationOfUserRegistrationData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79D56178265C597B0048C061 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79D5617A265C597B0048C061 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +80,7 @@
 				7929696826615CBD00E756AD /* InstagramViewController.swift */,
 				7929696D26618EB400E756AD /* UserInfoViewController.swift */,
 				7929696F26618EF000E756AD /* UserPhotoViewController.swift */,
+				79A2A31C2663A50100AD2FFE /* SongViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -105,6 +110,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		79A2A31E2663A94800AD2FFE /* music */ = {
+			isa = PBXGroup;
+			children = (
+				79A2A31F2663A96F00AD2FFE /* песня про зайцев.mp3 */,
+			);
+			path = music;
+			sourceTree = "<group>";
+		};
 		79D5616C265C597A0048C061 = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +138,7 @@
 		79D56177265C597B0048C061 /* VerificationOfUserRegistrationData */ = {
 			isa = PBXGroup;
 			children = (
+				79A2A31E2663A94800AD2FFE /* music */,
 				79D56186265C597F0048C061 /* Info.plist */,
 				792969632660ECE200E756AD /* Storyboards */,
 				792969622660ECC900E756AD /* Resources */,
@@ -197,6 +211,7 @@
 				79D56185265C597F0048C061 /* LaunchScreen.storyboard in Resources */,
 				79D56182265C597F0048C061 /* Assets.xcassets in Resources */,
 				79D56180265C597B0048C061 /* Main.storyboard in Resources */,
+				79A2A3202663A96F00AD2FFE /* песня про зайцев.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,10 +225,11 @@
 				79D5617D265C597B0048C061 /* LoginViewController.swift in Sources */,
 				7929696E26618EB400E756AD /* UserInfoViewController.swift in Sources */,
 				79D5618D265DA3570048C061 /* WelcomeViewController.swift in Sources */,
+				79A2A31B2663A2AE00AD2FFE /* AppDelegate.swift in Sources */,
 				792969672661520D00E756AD /* User.swift in Sources */,
 				7929696926615CBD00E756AD /* InstagramViewController.swift in Sources */,
 				792969652660EDAB00E756AD /* UIView+Extensions.swift in Sources */,
-				79D56179265C597B0048C061 /* AppDelegate.swift in Sources */,
+				79A2A31D2663A50100AD2FFE /* SongViewController.swift in Sources */,
 				7929697026618EF000E756AD /* UserPhotoViewController.swift in Sources */,
 				79D5617B265C597B0048C061 /* SceneDelegate.swift in Sources */,
 			);

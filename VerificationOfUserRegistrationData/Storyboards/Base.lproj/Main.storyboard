@@ -203,7 +203,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uz6-R0-Qhh">
-                                <rect key="frame" x="10" y="306" width="300" height="163"/>
+                                <rect key="frame" x="10" y="306" width="300" height="210"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSX-hW-icV">
                                         <rect key="frame" x="129.5" y="0.0" width="41.5" height="20.5"/>
@@ -242,6 +242,16 @@
                                             <action selector="instagramBtnPressed" destination="5t8-BX-Ax2" eventType="touchUpInside" id="S6k-IA-ygj"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oiX-Iv-6xr">
+                                        <rect key="frame" x="135" y="173" width="30" height="37"/>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="25"/>
+                                        <state key="normal">
+                                            <color key="titleColor" systemColor="systemRedColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="songBtnPressed" destination="5t8-BX-Ax2" eventType="touchUpInside" id="zMj-Qx-jLA"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -262,19 +272,88 @@
                         <outlet property="jobLabel" destination="FF4-Vo-ZLK" id="J8P-eq-DIo"/>
                         <outlet property="nameLabel" destination="sSX-hW-icV" id="Noe-5a-Rrh"/>
                         <outlet property="portretImage" destination="iM2-q3-fuj" id="h85-zP-Z6f"/>
+                        <outlet property="songBtn" destination="oiX-Iv-6xr" id="Djw-zh-bMC"/>
                         <outlet property="surnameLabel" destination="BeW-d1-Tou" id="Cop-sf-PEO"/>
                         <segue destination="KSp-2w-bpX" kind="show" identifier="Rabbit" id="H6B-1k-Ver"/>
                         <segue destination="HJK-cQ-keD" kind="show" identifier="Istagram" id="cuE-6V-uq3"/>
+                        <segue destination="JEh-wV-dUa" kind="show" identifier="Song" id="mO4-fo-7MQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ofh-cs-GHg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2788.125" y="-20.070422535211268"/>
         </scene>
+        <!--Song View Controller-->
+        <scene sceneID="mTj-jY-OJu">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="JEh-wV-dUa" customClass="SongViewController" customModule="VerificationOfUserRegistrationData" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jTp-tU-RNx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bvq-Jc-40Q">
+                                <rect key="frame" x="16" y="126" width="288" height="201"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="201" id="qpm-u9-2X6"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="N6u-CF-nCZ">
+                                <rect key="frame" x="90" y="407" width="140" height="24"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFs-w9-oZe">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="24"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="play.circle.fill" catalog="system" symbolScale="large" renderingMode="original"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="startBtnPressed:" destination="JEh-wV-dUa" eventType="touchUpInside" id="S4Q-2S-etD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ll0-yc-JGN">
+                                        <rect key="frame" x="50" y="0.0" width="40" height="24"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="stop.circle" catalog="system" symbolScale="large" renderingMode="original"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="stopBtnPressed:" destination="JEh-wV-dUa" eventType="touchUpInside" id="rSm-vc-Zx5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7I-e4-z23">
+                                        <rect key="frame" x="100" y="0.0" width="40" height="24"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="restart.circle" catalog="system" symbolScale="large" renderingMode="original"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="restartBtnPressed:" destination="JEh-wV-dUa" eventType="touchUpInside" id="Twz-ak-l3f"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rfz-1Y-IQz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bvq-Jc-40Q" firstAttribute="top" secondItem="rfz-1Y-IQz" secondAttribute="top" constant="70" id="Fwq-sm-Sbf"/>
+                            <constraint firstItem="rfz-1Y-IQz" firstAttribute="trailing" secondItem="N6u-CF-nCZ" secondAttribute="trailing" constant="90" id="Hcz-7o-P1O"/>
+                            <constraint firstItem="N6u-CF-nCZ" firstAttribute="leading" secondItem="rfz-1Y-IQz" secondAttribute="leading" constant="90" id="SS0-fh-meV"/>
+                            <constraint firstItem="bvq-Jc-40Q" firstAttribute="leading" secondItem="rfz-1Y-IQz" secondAttribute="leading" constant="16" id="TIf-P6-LYq"/>
+                            <constraint firstItem="N6u-CF-nCZ" firstAttribute="top" secondItem="bvq-Jc-40Q" secondAttribute="bottom" constant="80" id="Xyq-tC-4wn"/>
+                            <constraint firstItem="rfz-1Y-IQz" firstAttribute="trailing" secondItem="bvq-Jc-40Q" secondAttribute="trailing" constant="16" id="Y1m-gS-XcI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="P7E-Dn-m18"/>
+                    <connections>
+                        <outlet property="nikulinImageView" destination="bvq-Jc-40Q" id="jch-JI-Yyh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eHH-AO-5ar" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3862.5" y="288.38028169014086"/>
+        </scene>
         <!--User Photo View Controller-->
         <scene sceneID="UM9-NM-onP">
             <objects>
-                <viewController id="KSp-2w-bpX" customClass="UserPhotoViewController" customModule="VerificationOfUserRegistrationData" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="KSp-2w-bpX" customClass="UserPhotoViewController" customModule="VerificationOfUserRegistrationData" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kEX-de-v2o">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -301,12 +380,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zDP-KM-EbK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3720" y="-444"/>
+            <point key="canvasLocation" x="3840" y="-1137"/>
         </scene>
         <!--Instagram View Controller-->
         <scene sceneID="HKW-yd-RQK">
             <objects>
-                <viewController id="HJK-cQ-keD" customClass="InstagramViewController" customModule="VerificationOfUserRegistrationData" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="HJK-cQ-keD" customClass="InstagramViewController" customModule="VerificationOfUserRegistrationData" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N6I-tP-iTU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -368,7 +447,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N6e-Ql-YPa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3744.375" y="320.07042253521126"/>
+            <point key="canvasLocation" x="3966" y="-429"/>
         </scene>
         <!--О ВАС😎-->
         <scene sceneID="3Yl-1O-6KG">
@@ -392,6 +471,9 @@
     </scenes>
     <resources>
         <image name="hare" catalog="system" width="128" height="92"/>
+        <image name="play.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="restart.circle" catalog="system" width="128" height="121"/>
+        <image name="stop.circle" catalog="system" width="128" height="121"/>
         <image name="suit.heart" catalog="system" width="128" height="109"/>
         <image name="надпись инстаграм" width="1634" height="672"/>
         <systemColor name="systemBackgroundColor">

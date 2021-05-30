@@ -17,6 +17,7 @@ class UserInfoViewController: UIViewController {
     @IBOutlet weak var jobLabel: UILabel!
     
     @IBOutlet weak var InstagramBtn: UIButton!
+    @IBOutlet weak var songBtn: UIButton!
     
     var userName :String?
     var userSurname: String?
@@ -69,7 +70,7 @@ class UserInfoViewController: UIViewController {
         createFontTextLabels(textLabels: textLabels)
         
         InstagramBtn.setTitle("Ваша инста ТУТЬ💃", for: .normal)
-        
+        songBtn.setTitle("Песня про зайцев", for: .normal)
         self.navigationController!.tabBarItem.title = "О ВАС😎"
         
         self.view.addverticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
@@ -102,6 +103,9 @@ class UserInfoViewController: UIViewController {
     @IBAction func instagramBtnPressed() {
         performSegue(withIdentifier: "Istagram", sender: nil)
     }
-  
+    @IBAction func songBtnPressed() {
+        performSegue(withIdentifier: "Song", sender: nil)
+    }
+    
     
 }
