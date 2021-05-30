@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="ufc-4W-X2A">
-                                <rect key="frame" x="35" y="43" width="250" height="118"/>
+                                <rect key="frame" x="35" y="170" width="250" height="118"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Имя пользователя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0ee-We-UcO">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="34"/>
@@ -36,8 +36,8 @@
                                     <constraint firstAttribute="width" secondItem="ufc-4W-X2A" secondAttribute="height" multiplier="125:59" id="HSv-LN-IFx"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JwE-Bl-kQp">
-                                <rect key="frame" x="74.5" y="185" width="171" height="26"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JwE-Bl-kQp">
+                                <rect key="frame" x="75" y="291" width="171" height="26"/>
                                 <state key="normal" title="Авторизоваться">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <imageReference key="image" image="hare" catalog="system" symbolScale="large" renderingMode="original"/>
@@ -47,8 +47,8 @@
                                     <segue destination="3Ep-EV-a5d" kind="show" identifier="Autorization" id="0SI-Wq-9va"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Yzf-0p-iOL">
-                                <rect key="frame" x="48.5" y="237" width="223" height="29"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Yzf-0p-iOL">
+                                <rect key="frame" x="49" y="337" width="223" height="29"/>
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aax-4T-c7G">
                                         <rect key="frame" x="0.0" y="0.0" width="93" height="29"/>
@@ -74,6 +74,12 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="надпись инстаграм" translatesAutoresizingMaskIntoConstraints="NO" id="wvX-i0-wIK">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="PQU-5s-OtE"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.89000000000000001" green="0.43569051957077948" blue="0.88015951270862425" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -84,7 +90,10 @@
                             <constraint firstItem="JwE-Bl-kQp" firstAttribute="top" secondItem="ufc-4W-X2A" secondAttribute="bottom" constant="24" id="K8Z-CX-Hbi"/>
                             <constraint firstItem="JwE-Bl-kQp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TwI-2a-f03"/>
                             <constraint firstItem="Yzf-0p-iOL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UMK-qn-vxx"/>
-                            <constraint firstItem="ufc-4W-X2A" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="43" id="qPp-xi-TDD"/>
+                            <constraint firstItem="wvX-i0-wIK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ctL-H1-erh"/>
+                            <constraint firstItem="wvX-i0-wIK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hlr-oz-RHm"/>
+                            <constraint firstItem="ufc-4W-X2A" firstAttribute="top" secondItem="wvX-i0-wIK" secondAttribute="bottom" constant="40" id="kit-vc-SUe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wvX-i0-wIK" secondAttribute="trailing" id="p0x-5x-Mnp"/>
                         </constraints>
                     </view>
                     <connections>
@@ -384,6 +393,7 @@
     <resources>
         <image name="hare" catalog="system" width="128" height="92"/>
         <image name="suit.heart" catalog="system" width="128" height="109"/>
+        <image name="надпись инстаграм" width="1634" height="672"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
