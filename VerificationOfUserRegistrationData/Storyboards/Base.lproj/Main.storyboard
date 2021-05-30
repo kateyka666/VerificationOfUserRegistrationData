@@ -144,7 +144,10 @@
                             <constraint firstItem="Go3-8k-oZU" firstAttribute="centerX" secondItem="z6r-sd-Zml" secondAttribute="centerX" id="s64-1l-vQ0"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="je4-U7-36L"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="je4-U7-36L">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <imageReference key="selectedImage" image="suit.heart" catalog="system" symbolScale="large" renderingMode="original"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="GVb-Rv-lHg"/>
                     <connections>
                         <outlet property="welcomeUserNameLabel" destination="Go3-8k-oZU" id="kJC-Qd-cSg"/>
@@ -190,36 +193,42 @@
                                     <constraint firstAttribute="height" constant="180" id="zbj-f4-MNp"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uz6-R0-Qhh">
-                                <rect key="frame" x="10" y="306" width="300" height="152"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uz6-R0-Qhh">
+                                <rect key="frame" x="10" y="306" width="300" height="163"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSX-hW-icV">
-                                        <rect key="frame" x="0.0" y="0.0" width="41.5" height="20.5"/>
+                                        <rect key="frame" x="129.5" y="0.0" width="41.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BeW-d1-Tou">
-                                        <rect key="frame" x="0.0" y="30.5" width="41.5" height="20.5"/>
+                                        <rect key="frame" x="129.5" y="30.5" width="41.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="knO-fb-og2">
-                                        <rect key="frame" x="0.0" y="61" width="41.5" height="20.5"/>
+                                        <rect key="frame" x="129.5" y="61" width="41.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FF4-Vo-ZLK">
-                                        <rect key="frame" x="0.0" y="91.5" width="41.5" height="20.5"/>
+                                        <rect key="frame" x="129.5" y="91.5" width="41.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HcP-lZ-Ye9">
-                                        <rect key="frame" x="0.0" y="122" width="46" height="30"/>
-                                        <state key="normal" title="Button"/>
+                                        <rect key="frame" x="113.5" y="122" width="73" height="41"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" red="0.34583882360000001" green="0.15555369529999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" systemColor="systemRedColor"/>
+                                        </state>
                                         <connections>
                                             <action selector="instagramBtnPressed" destination="5t8-BX-Ax2" eventType="touchUpInside" id="S6k-IA-ygj"/>
                                         </connections>
@@ -274,7 +283,9 @@
                             <constraint firstItem="RbZ-CR-8Mm" firstAttribute="trailing" secondItem="Wkh-zF-c0k" secondAttribute="trailing" id="sIv-QH-7wO"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="3GD-es-Jr8"/>
+                    <navigationItem key="navigationItem" id="3GD-es-Jr8">
+                        <barButtonItem key="backBarButtonItem" title="О ВАС😎" id="zty-dw-Yi0"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="photoImageView" destination="Wkh-zF-c0k" id="4pL-AD-HcX"/>
                     </connections>
@@ -292,37 +303,69 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ff-aV-ub6">
-                                <rect key="frame" x="0.0" y="56" width="320" height="443"/>
+                                <rect key="frame" x="0.0" y="94" width="320" height="405"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ZH-ig-oYm">
+                                <rect key="frame" x="63" y="58" width="185" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5s-a3-DXj">
+                                <rect key="frame" x="10" y="58" width="45" height="30"/>
+                                <state key="normal" title="Назад"/>
+                                <connections>
+                                    <action selector="backBtnPressed" destination="HJK-cQ-keD" eventType="touchUpInside" id="GRD-sh-nph"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVt-MK-dbU">
+                                <rect key="frame" x="256" y="58" width="54" height="30"/>
+                                <state key="normal" title="Вперед"/>
+                                <connections>
+                                    <action selector="forwardBtnPressed" destination="HJK-cQ-keD" eventType="touchUpInside" id="Rfj-9N-iNQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hXg-Pn-vEC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="P5s-a3-DXj" firstAttribute="width" secondItem="WVt-MK-dbU" secondAttribute="width" multiplier="0.833333" id="Ebu-vj-bz0"/>
+                            <constraint firstItem="WVt-MK-dbU" firstAttribute="top" secondItem="hXg-Pn-vEC" secondAttribute="top" constant="2" id="Igh-cT-5GY"/>
+                            <constraint firstItem="P5s-a3-DXj" firstAttribute="top" secondItem="hXg-Pn-vEC" secondAttribute="top" constant="2" id="Npk-Vz-oVX"/>
                             <constraint firstItem="hXg-Pn-vEC" firstAttribute="bottom" secondItem="5ff-aV-ub6" secondAttribute="bottom" id="Ryd-3E-6fg"/>
                             <constraint firstItem="5ff-aV-ub6" firstAttribute="leading" secondItem="hXg-Pn-vEC" secondAttribute="leading" id="SrT-Br-eMV"/>
-                            <constraint firstItem="5ff-aV-ub6" firstAttribute="top" secondItem="hXg-Pn-vEC" secondAttribute="top" id="mjJ-fN-fPJ"/>
+                            <constraint firstItem="hXg-Pn-vEC" firstAttribute="trailing" secondItem="WVt-MK-dbU" secondAttribute="trailing" constant="10" id="UIq-V0-lRd"/>
+                            <constraint firstItem="WVt-MK-dbU" firstAttribute="leading" secondItem="7ZH-ig-oYm" secondAttribute="trailing" constant="8" id="dcX-yu-ODl"/>
+                            <constraint firstItem="P5s-a3-DXj" firstAttribute="leading" secondItem="hXg-Pn-vEC" secondAttribute="leading" constant="10" id="oxz-9p-5y8"/>
                             <constraint firstItem="hXg-Pn-vEC" firstAttribute="trailing" secondItem="5ff-aV-ub6" secondAttribute="trailing" id="qJ0-Yn-FHI"/>
+                            <constraint firstItem="7ZH-ig-oYm" firstAttribute="leading" secondItem="P5s-a3-DXj" secondAttribute="trailing" constant="8" id="tLh-jI-rFl"/>
+                            <constraint firstItem="5ff-aV-ub6" firstAttribute="top" secondItem="7ZH-ig-oYm" secondAttribute="bottom" constant="2" id="vtd-qL-PdC"/>
+                            <constraint firstItem="7ZH-ig-oYm" firstAttribute="top" secondItem="hXg-Pn-vEC" secondAttribute="top" constant="2" id="yr9-CU-e2u"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="nDR-OT-zvb"/>
+                    <navigationItem key="navigationItem" id="nDR-OT-zvb">
+                        <barButtonItem key="backBarButtonItem" enabled="NO" title="О ВАС😎" id="Vob-sf-yky"/>
+                    </navigationItem>
                     <connections>
+                        <outlet property="backButton" destination="P5s-a3-DXj" id="jbb-8J-y8h"/>
+                        <outlet property="forwardButton" destination="WVt-MK-dbU" id="lcc-kd-AxG"/>
                         <outlet property="instagramWebView" destination="5ff-aV-ub6" id="n3t-IZ-9ch"/>
+                        <outlet property="urlTextField" destination="7ZH-ig-oYm" id="9UL-VQ-U2Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N6e-Ql-YPa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3746" y="321"/>
+            <point key="canvasLocation" x="3744.375" y="320.07042253521126"/>
         </scene>
-        <!--Item-->
+        <!--О ВАС😎-->
         <scene sceneID="3Yl-1O-6KG">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="U0C-jC-9CV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="zf3-Kv-ith"/>
+                    <tabBarItem key="tabBarItem" title="О ВАС😎" id="zf3-Kv-ith"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cTt-ne-o8l">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
@@ -340,8 +383,12 @@
     </scenes>
     <resources>
         <image name="hare" catalog="system" width="128" height="92"/>
+        <image name="suit.heart" catalog="system" width="128" height="109"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

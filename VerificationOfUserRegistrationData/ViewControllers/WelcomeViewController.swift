@@ -11,9 +11,7 @@ class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var welcomeUserNameLabel: UILabel!
     
-  
     var userName :String?
-
     
     private let primaryColor = UIColor(
         red: CGFloat.random(in: 0...255),
@@ -28,15 +26,16 @@ class WelcomeViewController: UIViewController {
         alpha: 1
     )
 
-  
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupViewAndLabel()
+        setupTapBarViewAndLabel()
     }
-    private func setupViewAndLabel() {
+    
+    private func setupTapBarViewAndLabel() {
         view.addverticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
+        
+        tabBarItem.title = "ДРАТУТИ"
+
         welcomeUserNameLabel.text = " \(userName!), здравствуйте!"
         welcomeUserNameLabel.numberOfLines = 0
     }

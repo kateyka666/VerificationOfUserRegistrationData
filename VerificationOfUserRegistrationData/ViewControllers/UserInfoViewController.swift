@@ -25,10 +25,25 @@ class UserInfoViewController: UIViewController {
     var photo : String?
    
     private var user = User.createUsers()
+    
+    private var textLabels = [UILabel]()
+    
+    private let primaryColor = UIColor(
+        red: 109/255,
+        green: 168/255,
+        blue: CGFloat.random(in: 0...255),
+        alpha: 1
+    )
+    private let secondaryColor = UIColor(
+        red: CGFloat.random(in: 0...255) ,
+        green: 202/255,
+        blue: 230/255,
+        alpha: 1
+    )
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupLabelAndButton()
+        setupNavigationBarViewLabelAndButton()
         createImage()
     }
     override func viewWillLayoutSubviews() {
@@ -44,19 +59,29 @@ class UserInfoViewController: UIViewController {
                 }
             }
 
-    private func setupLabelAndButton() {
-//        nameLabel.text = UIFont(name: <#T##String#>, size: <#T##CGFloat#>)
+    private func setupNavigationBarViewLabelAndButton() {
+
         nameLabel.text = "Ваше имя: \(userName!)"
         surnameLabel.text = "Ваша фамилия: \(userSurname!)"
-        ageLabel.text = "Ваш возраст: \(age!) "
+        ageLabel.text = "Ваш возраст: \(age!) 😉"
         jobLabel.text = "Ваша профессия: \(job!) "
+        textLabels = [nameLabel, surnameLabel, ageLabel, jobLabel ]
+        createFontTextLabels(textLabels: textLabels)
         
         InstagramBtn.setTitle("Ваша инста ТУТЬ💃", for: .normal)
+        
+        self.navigationController!.tabBarItem.title = "О ВАС😎"
+        
+        self.view.addverticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
+        
+   
+       
     }
-//    private func createFontTextLabels(textLabel:UILabel ) {
-//        textLabel.text = UIFont(name: "Kohinoo telugu", size: 25)
-//        
-//    }
+    private func createFontTextLabels(textLabels:[UILabel] ) {
+        for textLabel in textLabels {
+        textLabel.font = UIFont(name: "Helvetica", size: 25)
+        }
+    }
     
     private func createImage() {
         portretImage.image = UIImage(named: photo!)
