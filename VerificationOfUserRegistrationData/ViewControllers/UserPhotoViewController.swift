@@ -8,14 +8,18 @@
 import UIKit
 
 class UserPhotoViewController: UIViewController {
-    private var user = User.createUsers()
+    @IBOutlet weak var photoImageView: UIImageView!
+    var photo : String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupPhotoVC()
 
-        // Do any additional setup after loading the view.
+      
     }
-    
+    private func setupPhotoVC() {
+        photoImageView.image = UIImage(named: photo!)
+    }
 
 
 }

@@ -18,14 +18,65 @@ class UserInfoViewController: UIViewController {
     
     @IBOutlet weak var InstagramBtn: UIButton!
     
+    var userName :String?
+    var userSurname: String?
+    var age : Int?
+    var job : String?
+    var photo : String?
+   
     private var user = User.createUsers()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupLabelAndButton()
+        createImage()
+    }
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        portretImage.layer.cornerRadius = portretImage.layer.frame.height / 2
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let insta = segue.destination as? InstagramViewController {
+                insta.instagram = user[0].instagram
+                } else if let userPhoto = segue.destination as? UserPhotoViewController{
+                userPhoto.photo = user[1].photo.rawValue
+                }
+            }
 
+    private func setupLabelAndButton() {
+//        nameLabel.text = UIFont(name: <#T##String#>, size: <#T##CGFloat#>)
+        nameLabel.text = "Ваше имя: \(userName!)"
+        surnameLabel.text = "Ваша фамилия: \(userSurname!)"
+        ageLabel.text = "Ваш возраст: \(age!) "
+        jobLabel.text = "Ваша профессия: \(job!) "
+        
+        InstagramBtn.setTitle("Ваша инста ТУТЬ💃", for: .normal)
+    }
+//    private func createFontTextLabels(textLabel:UILabel ) {
+//        textLabel.text = UIFont(name: "Kohinoo telugu", size: 25)
+//        
+//    }
+    
+    private func createImage() {
+        portretImage.image = UIImage(named: photo!)
+        portretImage.isHighlighted = true
+        portretImage.layer.borderWidth = 8
+        portretImage.layer.borderColor = UIColor.purple.cgColor
+//        Логическое значение, которое определяет, игнорируются ли пользовательские события и удалены из очереди событий
+        portretImage.isUserInteractionEnabled = true
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(tapOnImage))
+        gesture.numberOfTapsRequired = 1
+        portretImage.addGestureRecognizer(gesture)
+    }
+    
+    @objc private func tapOnImage(gesture:UITapGestureRecognizer) {
+        performSegue(withIdentifier: "Rabbit", sender: nil)
     }
     
     @IBAction func instagramBtnPressed() {
+        performSegue(withIdentifier: "Istagram", sender: nil)
     }
+  
     
 }

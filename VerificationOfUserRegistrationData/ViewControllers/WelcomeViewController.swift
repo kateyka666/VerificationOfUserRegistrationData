@@ -11,7 +11,9 @@ class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var welcomeUserNameLabel: UILabel!
     
-    private var user = User.createUsers()
+  
+    var userName :String?
+
     
     private let primaryColor = UIColor(
         red: CGFloat.random(in: 0...255),
@@ -35,8 +37,7 @@ class WelcomeViewController: UIViewController {
     }
     private func setupViewAndLabel() {
         view.addverticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
-        
-        welcomeUserNameLabel.text = " \(user[0].name), здравствуйте!"
+        welcomeUserNameLabel.text = " \(userName!), здравствуйте!"
         welcomeUserNameLabel.numberOfLines = 0
     }
     

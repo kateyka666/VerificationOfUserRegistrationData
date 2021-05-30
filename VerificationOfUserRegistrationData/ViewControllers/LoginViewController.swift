@@ -29,6 +29,7 @@ class LoginViewController: UIViewController {
         userPasswordTextField.layer.cornerRadius = 15
         forgetNameBtn.layer.cornerRadius = 10
         forgetPasswordBtn.layer.cornerRadius = 10
+        
     }
     
     //    клавиатура скрывается при любом клике за пределами текстового поля, но не на элементах UI
@@ -42,19 +43,30 @@ class LoginViewController: UIViewController {
             guard segue.identifier == "Autorization" else {
                 return
             }
-            guard let destination = segue.destination as? WelcomeViewController else { return}
-            
+            let tabBarController = segue.destination as? UITabBarController
+            if let arrayOfViewControllers = tabBarController?.viewControllers{
+            for vc in arrayOfViewControllers {
+                if let viewController = vc as? UINavigationController {
+                    let userInfo = viewController.topViewController as! UserInfoViewController
+                    userInfo.userName = user[0].name
+                    userInfo.userSurname = user[0].surname
+                    userInfo.age = user[0].age
+                    userInfo.photo = user[0].photo.rawValue
+                    userInfo.job = user[0].job
+                }else if let welcomeVC = vc as? WelcomeViewController {
+                    welcomeVC.userName = user[0].name
+                    
+                }
+            }
+            }
         }
     }
     
     //    создаем функцию для возвращения по unwind segue на этот vc, затем кнопку выхода перетягиваем на экзит в сториборде, в настройках unwind segue задаем идентификатор и отмечаем правильное название метода, всю реализацию метода пишем в этом vc, сначала проверяем что это именно этот unwind segue, потом делаем очистку текстфилдов и добавляем алерт с прощанием
     @IBAction func unwindToLoginViewController(_ unwindSegue: UIStoryboardSegue) {
         guard unwindSegue.identifier == "LogOut" else {return}
-        
         userNameTextField.text = ""
         userPasswordTextField.text = ""
-        
-        guard let source = unwindSegue.source as? WelcomeViewController else {return}
         doAlertToBtn(title: "До свидания, \(user[0].name) 🌹🌹🌹")
     }
     

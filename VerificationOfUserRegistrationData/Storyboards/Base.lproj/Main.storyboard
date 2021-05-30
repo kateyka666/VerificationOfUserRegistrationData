@@ -162,6 +162,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="3Sl-Zt-psD"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LhW-7X-gag">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -183,14 +184,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iM2-q3-fuj">
-                                <rect key="frame" x="70" y="71" width="180" height="180"/>
+                                <rect key="frame" x="70" y="86" width="180" height="180"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="e7p-yY-aZV"/>
                                     <constraint firstAttribute="height" constant="180" id="zbj-f4-MNp"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uz6-R0-Qhh">
-                                <rect key="frame" x="10" y="291" width="300" height="152"/>
+                                <rect key="frame" x="10" y="306" width="300" height="152"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSX-hW-icV">
                                         <rect key="frame" x="0.0" y="0.0" width="41.5" height="20.5"/>
@@ -231,7 +232,7 @@
                         <constraints>
                             <constraint firstItem="iM2-q3-fuj" firstAttribute="centerX" secondItem="ad6-0z-yi7" secondAttribute="centerX" id="BAD-XF-Fre"/>
                             <constraint firstItem="JCv-ru-VPd" firstAttribute="trailing" secondItem="uz6-R0-Qhh" secondAttribute="trailing" constant="10" id="DOT-qp-8Y0"/>
-                            <constraint firstItem="iM2-q3-fuj" firstAttribute="top" secondItem="JCv-ru-VPd" secondAttribute="top" constant="15" id="KCV-b1-Q5H"/>
+                            <constraint firstItem="iM2-q3-fuj" firstAttribute="top" secondItem="JCv-ru-VPd" secondAttribute="top" constant="30" id="KCV-b1-Q5H"/>
                             <constraint firstItem="uz6-R0-Qhh" firstAttribute="top" secondItem="iM2-q3-fuj" secondAttribute="bottom" constant="40" id="PQG-KX-qzB"/>
                             <constraint firstItem="uz6-R0-Qhh" firstAttribute="leading" secondItem="JCv-ru-VPd" secondAttribute="leading" constant="10" id="SC8-B7-YQi"/>
                         </constraints>
@@ -274,6 +275,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3GD-es-Jr8"/>
+                    <connections>
+                        <outlet property="photoImageView" destination="Wkh-zF-c0k" id="4pL-AD-HcX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zDP-KM-EbK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

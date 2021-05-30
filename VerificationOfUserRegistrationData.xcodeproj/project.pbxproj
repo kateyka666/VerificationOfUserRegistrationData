@@ -80,12 +80,12 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		792969622660ECC900E756AD /* Resource */ = {
+		792969622660ECC900E756AD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				79D56181265C597F0048C061 /* Assets.xcassets */,
 			);
-			path = Resource;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		792969632660ECE200E756AD /* Storyboards */ = {
@@ -125,14 +125,14 @@
 		79D56177265C597B0048C061 /* VerificationOfUserRegistrationData */ = {
 			isa = PBXGroup;
 			children = (
+				79D56186265C597F0048C061 /* Info.plist */,
 				792969632660ECE200E756AD /* Storyboards */,
-				792969622660ECC900E756AD /* Resource */,
+				792969622660ECC900E756AD /* Resources */,
 				792969612660ECB800E756AD /* ViewControllers */,
 				792969602660ECA100E756AD /* Models */,
 				7929695F2660EC7C00E756AD /* Extensions */,
 				79D56178265C597B0048C061 /* AppDelegate.swift */,
 				79D5617A265C597B0048C061 /* SceneDelegate.swift */,
-				79D56186265C597F0048C061 /* Info.plist */,
 			);
 			path = VerificationOfUserRegistrationData;
 			sourceTree = "<group>";

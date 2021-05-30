@@ -17,7 +17,16 @@ struct User {
     var instagram : String
     
     static func createUsers() -> [User] {
-        return [User(name: "Анастасия", surname: "Соколан", password: "кролики", age: 17, job: "IOS Dev", photo: .portret, instagram: "https://www.instagram.com/anastasia_sokolan/"), User(name: "Анастасия", surname: "Соколан", password: "кролики", age: 17, job: "IOS Dev", photo: .rabbit, instagram: "https://www.instagram.com/anastasia_sokolan/")]
+        return [
+            User(name: "Анастасия", surname: "Соколан",
+                 password: "кролики", age: 17, job: "IOS Dev",
+                 photo: .portret,
+                 instagram: "https://www.instagram.com/anastasia_sokolan/"),
+            User(name: "Анастасия", surname: "Соколан", password: "кролики",
+                 age: 17, job: "IOS Dev",
+                 photo: .rabbit,
+                 instagram: "https://www.instagram.com/anastasia_sokolan/")
+        ]
     }
 }
 

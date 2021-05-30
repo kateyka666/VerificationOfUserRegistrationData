@@ -12,16 +12,16 @@ class InstagramViewController: UIViewController {
     
     @IBOutlet weak var instagramWebView: WKWebView!
     
-    private var user = User.createUsers()
+    var instagram : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         webViewReguest()
     }
-    
+   
     private func webViewReguest(){
        //    преобразуем строку в урл
-        let url = URL(string: user[0].instagram )!
+        let url = URL(string: instagram!)!
        //    создаем запрос
            let reguest = URLRequest(url: url)
            //    загрузим наш запрос на вебкитвью
