@@ -19,13 +19,8 @@ class UserInfoViewController: UIViewController {
     @IBOutlet weak var InstagramBtn: UIButton!
     @IBOutlet weak var songBtn: UIButton!
     
-    var userName :String?
-    var userSurname: String?
-    var age : Int?
-    var job : String?
-    var photo : String?
+    var user = [User]()
    
-    private var user = User.createUsers()
     
     private var textLabels = [UILabel]()
     
@@ -62,10 +57,10 @@ class UserInfoViewController: UIViewController {
 
     private func setupNavigationBarViewLabelAndButton() {
 
-        nameLabel.text = "Ваше имя: \(userName!)"
-        surnameLabel.text = "Ваша фамилия: \(userSurname!)"
-        ageLabel.text = "Ваш возраст: \(age!) 😉"
-        jobLabel.text = "Ваша профессия: \(job!) "
+        nameLabel.text = "Ваше имя: \(user[0].name)"
+        surnameLabel.text = "Ваша фамилия: \(user[0].surname)"
+        ageLabel.text = "Ваш возраст: \(user[0].age) 😉"
+        jobLabel.text = "Ваша профессия: \(user[0].job) "
         textLabels = [nameLabel, surnameLabel, ageLabel, jobLabel ]
         createFontTextLabels(textLabels: textLabels)
         
@@ -85,7 +80,7 @@ class UserInfoViewController: UIViewController {
     }
     
     private func createImage() {
-        portretImage.image = UIImage(named: photo!)
+        portretImage.image = UIImage(named: user[0].photo.rawValue)
         portretImage.isHighlighted = true
         portretImage.layer.borderWidth = 8
         portretImage.layer.borderColor = UIColor.purple.cgColor

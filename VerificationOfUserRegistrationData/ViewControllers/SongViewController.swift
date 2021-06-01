@@ -33,6 +33,10 @@ class SongViewController: UIViewController {
         doCatchAudio()
 
     }
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        nikulinImageView.layer.cornerRadius = 10
+    }
     private func doCatchAudio () {
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "песня про зайцев", ofType: "mp3")!))

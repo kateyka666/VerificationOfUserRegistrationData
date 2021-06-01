@@ -15,7 +15,7 @@
 		7929697026618EF000E756AD /* UserPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7929696F26618EF000E756AD /* UserPhotoViewController.swift */; };
 		79A2A31B2663A2AE00AD2FFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D56178265C597B0048C061 /* AppDelegate.swift */; };
 		79A2A31D2663A50100AD2FFE /* SongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A2A31C2663A50100AD2FFE /* SongViewController.swift */; };
-		79A2A3202663A96F00AD2FFE /* песня про зайцев.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 79A2A31F2663A96F00AD2FFE /* песня про зайцев.mp3 */; };
+		79A2A3252666164B00AD2FFE /* песня про зайцев.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 79A2A3242666164B00AD2FFE /* песня про зайцев.mp3 */; };
 		79D5617B265C597B0048C061 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D5617A265C597B0048C061 /* SceneDelegate.swift */; };
 		79D5617D265C597B0048C061 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D5617C265C597B0048C061 /* LoginViewController.swift */; };
 		79D56180265C597B0048C061 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79D5617E265C597B0048C061 /* Main.storyboard */; };
@@ -32,7 +32,7 @@
 		7929696D26618EB400E756AD /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		7929696F26618EF000E756AD /* UserPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPhotoViewController.swift; sourceTree = "<group>"; };
 		79A2A31C2663A50100AD2FFE /* SongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewController.swift; sourceTree = "<group>"; };
-		79A2A31F2663A96F00AD2FFE /* песня про зайцев.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "песня про зайцев.mp3"; path = "../../../../../песня про зайцев.mp3"; sourceTree = "<group>"; };
+		79A2A3242666164B00AD2FFE /* песня про зайцев.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "песня про зайцев.mp3"; sourceTree = "<group>"; };
 		79D56175265C597B0048C061 /* VerificationOfUserRegistrationData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VerificationOfUserRegistrationData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79D56178265C597B0048C061 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79D5617A265C597B0048C061 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +88,7 @@
 		792969622660ECC900E756AD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				79A2A3212666152F00AD2FFE /* music */,
 				79D56181265C597F0048C061 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -110,12 +111,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		79A2A31E2663A94800AD2FFE /* music */ = {
+		79A2A3212666152F00AD2FFE /* music */ = {
 			isa = PBXGroup;
 			children = (
-				79A2A31F2663A96F00AD2FFE /* песня про зайцев.mp3 */,
+				79A2A3242666164B00AD2FFE /* песня про зайцев.mp3 */,
 			);
 			path = music;
+			sourceTree = "<group>";
+		};
+		79A2A326266618AA00AD2FFE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				79D56186265C597F0048C061 /* Info.plist */,
+				79D56178265C597B0048C061 /* AppDelegate.swift */,
+				79D5617A265C597B0048C061 /* SceneDelegate.swift */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		79D5616C265C597A0048C061 = {
@@ -138,15 +149,12 @@
 		79D56177265C597B0048C061 /* VerificationOfUserRegistrationData */ = {
 			isa = PBXGroup;
 			children = (
-				79A2A31E2663A94800AD2FFE /* music */,
-				79D56186265C597F0048C061 /* Info.plist */,
 				792969632660ECE200E756AD /* Storyboards */,
 				792969622660ECC900E756AD /* Resources */,
 				792969612660ECB800E756AD /* ViewControllers */,
 				792969602660ECA100E756AD /* Models */,
 				7929695F2660EC7C00E756AD /* Extensions */,
-				79D56178265C597B0048C061 /* AppDelegate.swift */,
-				79D5617A265C597B0048C061 /* SceneDelegate.swift */,
+				79A2A326266618AA00AD2FFE /* Supporting Files */,
 			);
 			path = VerificationOfUserRegistrationData;
 			sourceTree = "<group>";
@@ -211,7 +219,7 @@
 				79D56185265C597F0048C061 /* LaunchScreen.storyboard in Resources */,
 				79D56182265C597F0048C061 /* Assets.xcassets in Resources */,
 				79D56180265C597B0048C061 /* Main.storyboard in Resources */,
-				79A2A3202663A96F00AD2FFE /* песня про зайцев.mp3 in Resources */,
+				79A2A3252666164B00AD2FFE /* песня про зайцев.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,7 +388,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 96UHXBP52X;
-				INFOPLIST_FILE = VerificationOfUserRegistrationData/Info.plist;
+				INFOPLIST_FILE = "VerificationOfUserRegistrationData/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -399,7 +407,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 96UHXBP52X;
-				INFOPLIST_FILE = VerificationOfUserRegistrationData/Info.plist;
+				INFOPLIST_FILE = "VerificationOfUserRegistrationData/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

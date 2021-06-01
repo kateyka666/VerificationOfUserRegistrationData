@@ -11,7 +11,7 @@ class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var welcomeUserNameLabel: UILabel!
     
-    var userName :String?
+    var user = [User]()
     
     private let primaryColor = UIColor(
         red: CGFloat.random(in: 0...255),
@@ -36,7 +36,7 @@ class WelcomeViewController: UIViewController {
         
         tabBarItem.title = "ДРАТУТИ"
 
-        welcomeUserNameLabel.text = " \(userName!), здравствуйте!"
+        welcomeUserNameLabel.text = " \(user[0].name), здравствуйте!"
         welcomeUserNameLabel.numberOfLines = 0
     }
     

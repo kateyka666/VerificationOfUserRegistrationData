@@ -48,13 +48,9 @@ class LoginViewController: UIViewController {
             for vc in arrayOfViewControllers {
                 if let viewController = vc as? UINavigationController {
                     let userInfo = viewController.topViewController as! UserInfoViewController
-                    userInfo.userName = user[0].name
-                    userInfo.userSurname = user[0].surname
-                    userInfo.age = user[0].age
-                    userInfo.photo = user[0].photo.rawValue
-                    userInfo.job = user[0].job
+                    userInfo.user = user
                 }else if let welcomeVC = vc as? WelcomeViewController {
-                    welcomeVC.userName = user[0].name
+                    welcomeVC.user = user
                     
                 }
             }
