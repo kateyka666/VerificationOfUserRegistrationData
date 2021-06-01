@@ -203,7 +203,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uz6-R0-Qhh">
-                                <rect key="frame" x="10" y="306" width="300" height="210"/>
+                                <rect key="frame" x="10" y="306" width="300" height="207"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSX-hW-icV">
                                         <rect key="frame" x="129.5" y="0.0" width="41.5" height="20.5"/>
@@ -243,8 +243,8 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oiX-Iv-6xr">
-                                        <rect key="frame" x="135" y="173" width="30" height="37"/>
-                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="25"/>
+                                        <rect key="frame" x="135" y="173" width="30" height="34"/>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="22"/>
                                         <state key="normal">
                                             <color key="titleColor" systemColor="systemRedColor"/>
                                         </state>

@@ -66,6 +66,7 @@ class UserInfoViewController: UIViewController {
         
         InstagramBtn.setTitle("Ваша инста ТУТЬ💃", for: .normal)
         songBtn.setTitle("Песня про зайцев", for: .normal)
+        songBtn.titleLabel?.numberOfLines = 0
         self.navigationController!.tabBarItem.title = "О ВАС😎"
         
         self.view.addverticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
